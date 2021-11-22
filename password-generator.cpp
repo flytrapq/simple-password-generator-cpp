@@ -29,16 +29,16 @@ void GenereatePass(char password[], int length) {
     for (int j = 0; j < length; j++) {
         mt19937 mersenne(rd());
         password[j] = possible_chars[mersenne() % 89];
-        //cout << "\033[0;32m";
+        //* cout << "\033[0;32m";
         cout << password[j];
     }
-    //cout << "\033[0;37m";
+    //* cout << "\033[0;37m";
     cout << " '\n\nFeel free to copy!\n\n";
 }
 
 int main()
 {
-    //cout << "\033[0;37m";
+    //* cout << "\033[0;37m";
     bool Continue = true;
     while (Continue) {
         // we gotta check if the password is at least 1 character long
@@ -51,9 +51,9 @@ int main()
                 length = stoi(temp);
             }
             else {
-                //cout << "\033[0;31m";
+                //* cout << "\033[0;31m";
                 cout << "The number is not recognised, try again.\n\n";
-                //cout << "\033[0;37m";
+                //* cout << "\033[0;37m";
                 continue;
             }
 
