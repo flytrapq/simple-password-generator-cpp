@@ -28,8 +28,8 @@ void GenereatePass(char password[], int length) {
     cout << "Your password is -> ' ";
     for (int j = 0; j < length; j++) {
         mt19937 mersenne(rd());
-        password[j] = possible_chars[mersenne() % 89];
-        //* cout << "\033[0;32m";
+        password[j] = possible_chars[mersenne() % possible_chars.length()];             // Now it is possible to create a list of possible characters
+        //* cout << "\033[0;32m";                                                       // with different amount of characters
         cout << password[j];
     }
     //* cout << "\033[0;37m";
